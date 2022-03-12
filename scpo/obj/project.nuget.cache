@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "h55E7cKHezFfPMNyoSM8cuNtfxdiw3qCEXFEaP24DnCU31Ir8yn7V7ep5DGG61paBB7qQ13TqvQyVQJnbHugAQ==",
+  "dgSpecHash": "7hA/+cnus1Ba0i6WWBl83nY1jAbUp2h3pwNI49W5c42h4SdSzBjHL2E946GaQmtfuYi5LJQNw+1diw/I32cvyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Luis Dario\\Desktop\\scpo\\scpo\\scpo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Luis Dario\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\Luis Dario\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

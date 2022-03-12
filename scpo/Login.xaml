@@ -1,0 +1,135 @@
+﻿<Window x:Class="scpo.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:scpo"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Iniciar Sesión" Height="450" Width="800"
+        
+        ResizeMode="CanMinimize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <materialDesign:Card>
+            <Grid>
+                <!--<Border 
+                    BorderBrush="#000000" BorderThickness="1"
+                    Margin="20"
+                    HorizontalAlignment="Right"
+                    Width="350" Height="300"/>-->
+                
+                <StackPanel
+                    HorizontalAlignment="Right"
+                    Margin="20"
+                    Width="350" Height="300">
+
+                    <TextBlock
+                        Text="Iniciar Sesión" 
+                        TextAlignment="Center" 
+                        VerticalAlignment="Top"
+                        Foreground="#FF7AC6"
+                        FontSize="20"
+                        FontFamily="Roboto"
+                        FontWeight="ExtraBlack"
+                        Padding="15"
+                        HorizontalAlignment="Center"
+                        Width="auto" Height="auto"/>
+
+                    <!--<TextBox
+                        x:Name="txtNombreUsuario"
+                        materialDesign:HintAssist.Hint="Nombre de usuario"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                        Height="45" 
+                        FontSize="15"
+                        Width="300"
+                        VerticalAlignment="Bottom" />-->
+                    <TextBlock 
+                        Text="Nombre de Usuario"
+                        Width="auto"
+                        FontFamily="Roboto"
+                        FontWeight="UltraBold"
+                        Foreground="#000000"
+                        Margin="50,10,0,0"
+                        
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"/>
+                    
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon 
+                            Kind="User"
+                            Foreground="#FF7AC6"
+                            Margin="10,0,10,0"
+                            Height="30" Width="30"/>
+                        <TextBox
+                            FontFamily="Roboto"
+                            Width="260"
+                            materialDesign:TextFieldAssist.UnderlineBrush="#FF7AC6"
+                            Height="auto"/>
+                    </StackPanel>
+                    <TextBlock 
+                        Text="Contraseña"
+                        Width="auto"
+                        FontFamily="Roboto"
+                        FontWeight="UltraBold"
+                        Foreground="#000000"
+                        Margin="50,20,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon 
+                            Kind="Password"
+                            Margin="10,0,10,0"
+                            Foreground="#FF7AC6"
+                            Height="30" Width="30"/>
+                        <PasswordBox
+                            Width="260"
+                            FontFamily="Roboto"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                            materialDesign:TextFieldAssist.UnderlineBrush="#FF7AC6"
+                            Height="auto"/>
+                    </StackPanel>
+                    <!--<PasswordBox    
+                        x:Name="txtPassword"
+                        Height="43" 
+                        Width="300"
+                        Margin="0,20,0,0"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Contraseña"
+                        materialDesign:TextFieldAssist.HasClearButton="True"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>-->
+                    
+                    
+                    <Button
+                        x:Name="BtnIniciarSesion"
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        FontSize="19"
+                        Margin="0,30,0,0"
+                        Background="#FF7AC6"
+                        Width="260"
+                        FontFamily="Roboto"
+                        BorderBrush="#FF7AC6"
+                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" 
+                        VerticalAlignment="Bottom">
+                        Ingresar
+                    </Button>
+                </StackPanel>
+
+                <Image 
+                    Source="/Resourse/background.png"
+                    Width="400" Height="auto"
+                    Stretch="Uniform"
+                    HorizontalAlignment="Left"/>
+            </Grid>
+        </materialDesign:Card>
+
+    </Grid>
+</Window>

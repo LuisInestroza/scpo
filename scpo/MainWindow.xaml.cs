@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+// Libreria para formatos de las fechas.
+using System.Globalization;
 
 namespace scpo
 {
@@ -23,6 +25,28 @@ namespace scpo
         public MainWindow()
         {
             InitializeComponent();
+            displayCalendar();
+        }
+
+        /// <summary>
+        /// Función para mostrar el calendario de citas 
+        /// </summary>
+        private void displayCalendar()
+        {
+            DateTime now = DateTime.Now;
+
+            // Obtener el mes y el año actual
+            int month = now.Month;
+            int year = now.Year;
+
+            // Cambiar el formate del mes del numero al nombre.
+            String nameMonth = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+
+            // Mostrar el mes y el año en el label
+            lbMonthYear.Text = nameMonth+", " +year.ToString();
+
+           
+            
         }
     }
 }

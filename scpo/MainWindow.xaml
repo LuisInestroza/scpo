@@ -5,8 +5,122 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:scpo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Menú y Calendario de Citas" Height="800" Width="1500"
+        WindowStartupLocation="CenterScreen"
+       
+       
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
+        <materialDesign:Card>
+            <Grid>
 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="0"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.25*"></RowDefinition>
+                    <RowDefinition Height="0.25*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="0.25*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+
+                <Button x:Name="PrevButton" Content="Previous" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" />
+                <Button x:Name="NextButton" Content="Next" Grid.Column="6" Grid.Row="0"  HorizontalAlignment="Center"  />
+
+                <!--Text de mes y año-->
+                <TextBlock x:Name="lbMonthYear"  Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2"  VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="30" FontWeight="SemiBold"/>
+                <!--Boton de ir hacia delante-->
+
+                
+                
+
+                <Button x:Name="ButtonCalendar1" Content="Button" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar2" Content="Button" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar3" Content="Button" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar4" Content="Button" Grid.Column="5" Grid.Row="2" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar5" Content="Button" Grid.Column="6" Grid.Row="2" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar6" Content="Button" Grid.Column="7" Grid.Row="2" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar7" Content="Button" Grid.Column="8" Grid.Row="2" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar8" Content="Button" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar9" Content="Button" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar10" Content="Button" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar11" Content="Button" Grid.Column="5" Grid.Row="3" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar12" Content="Button" Grid.Column="6" Grid.Row="3" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar13" Content="Button" Grid.Column="7" Grid.Row="3" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar14" Content="Button" Grid.Column="8" Grid.Row="3" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar15" Content="Button" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar16" Content="Button" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar17" Content="Button" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar18" Content="Button" Grid.Column="5" Grid.Row="4" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar19" Content="Button" Grid.Column="6" Grid.Row="4" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar20" Content="Button" Grid.Column="7" Grid.Row="4" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar21" Content="Button" Grid.Column="8" Grid.Row="4" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar22" Content="Button" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar23" Content="Button" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar24" Content="Button" Grid.Column="4" Grid.Row="5" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar25" Content="Button" Grid.Column="5" Grid.Row="5" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar26" Content="Button" Grid.Column="6" Grid.Row="5" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar27" Content="Button" Grid.Column="7" Grid.Row="5" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar28" Content="Button" Grid.Column="8" Grid.Row="5" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar29" Content="Button" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar30" Content="Button" Grid.Column="3" Grid.Row="6" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar31" Content="Button" Grid.Column="4" Grid.Row="6" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar32" Content="Button" Grid.Column="5" Grid.Row="6" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar33" Content="Button" Grid.Column="6" Grid.Row="6" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar34" Content="Button" Grid.Column="7" Grid.Row="6" HorizontalAlignment="Stretch" Height="auto" />
+                <Button x:Name="ButtonCalendar35" Content="Button" Grid.Column="8" Grid.Row="6" HorizontalAlignment="Stretch" Height="auto" />
+
+                <!--STACK PANEL DEL MES, AÑO Y BOTONES DE MOVER LAS FECHAS-->
+                
+               
+                    <!--Boton de ir hacia atras-->
+                
+                    
+                    
+             
+                
+                
+                <!--STACK PANEL DE FECHA DE LA SEMANA-->
+               
+                    <!--Fechas de la semana-->
+                <TextBlock Text="Domingo" FontSize="21" FontWeight="SemiBold" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="Lunes"  FontSize="21" FontWeight="SemiBold" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="Martes"  FontSize="21" FontWeight="SemiBold" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="Miércoles" FontSize="21" FontWeight="SemiBold" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="Jueves"  FontSize="21" FontWeight="SemiBold" Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="Viernes"  FontSize="21" FontWeight="SemiBold" Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="Sábado"  FontSize="21" FontWeight="SemiBold" Grid.Column="8" Grid.Row="1" HorizontalAlignment="Center"/>
+                
+                
+                
+                
+               
+                
+                
+            </Grid>
+        </materialDesign:Card>
     </Grid>
 </Window>
