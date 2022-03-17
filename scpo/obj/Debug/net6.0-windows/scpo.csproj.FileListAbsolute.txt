@@ -27,3 +27,5 @@ C:\Users\Luis Dario\Desktop\scpo\scpo\obj\Debug\net6.0-windows\Login.g.cs
 C:\Users\Luis Dario\Desktop\scpo\scpo\obj\Debug\net6.0-windows\Login.baml
 C:\Users\Luis Dario\Desktop\scpo\scpo\bin\Debug\net6.0-windows\Resourse\background.png
 C:\Users\Luis Dario\Desktop\scpo\scpo\obj\Debug\net6.0-windows\scpo_Content.g.cs
+C:\Users\Luis Dario\Desktop\scpo\scpo\obj\Debug\net6.0-windows\Paciente.g.cs
+C:\Users\Luis Dario\Desktop\scpo\scpo\obj\Debug\net6.0-windows\Paciente.baml

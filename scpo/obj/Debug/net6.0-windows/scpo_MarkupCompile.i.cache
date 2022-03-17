@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Luis Dario\Desktop\scpo\scpo\App.xaml
-2-1376777318
-1-1833038714
-61150567975
+3-373967929
+2-1737408920
+7-661721880
 1962121465955
-Login.xaml;MainWindow.xaml;
+Login.xaml;MainWindow.xaml;Paciente.xaml;
 
 True
 
