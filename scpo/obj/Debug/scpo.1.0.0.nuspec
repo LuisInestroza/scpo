@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>scpo</id>
+    <version>1.0.0</version>
+    <authors>scpo</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="MaterialDesignThemes" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/icono.ico" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resourse/background.png" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\Luis Dario\Desktop\scpo\scpo\bin\Debug\net6.0-windows\scpo.runtimeconfig.json" target="lib\net6.0-windows7.0\scpo.runtimeconfig.json" />
+    <file src="C:\Users\Luis Dario\Desktop\scpo\scpo\bin\Debug\net6.0-windows\scpo.dll" target="lib\net6.0-windows7.0\scpo.dll" />
+    <file src="C:\Users\Luis Dario\Desktop\scpo\scpo\icono.ico" target="content\icono.ico" />
+    <file src="C:\Users\Luis Dario\Desktop\scpo\scpo\icono.ico" target="contentFiles\any\net6.0-windows7.0\icono.ico" />
+    <file src="C:\Users\Luis Dario\Desktop\scpo\scpo\Resourse\background.png" target="content\Resourse\background.png" />
+    <file src="C:\Users\Luis Dario\Desktop\scpo\scpo\Resourse\background.png" target="contentFiles\any\net6.0-windows7.0\Resourse\background.png" />
+  </files>
+</package>

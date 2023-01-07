@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Crear Paciente" Height="550" Width="800"
         
-     
+        
+        
         WindowStartupLocation="CenterScreen"
         
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -17,10 +18,14 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
     <Grid>
         <materialDesign:Card>
             <Grid>
+                <Image  Source="/Resourse/background.png" Opacity="0.1"/>
                 <StackPanel Margin="20" 
                             Width="400" Height="auto"
                             VerticalAlignment="Top"
@@ -40,6 +45,7 @@
                     
                     <TextBox
                         x:Name="txtNombreCompleto"
+                        
                         materialDesign:HintAssist.Hint="Nombre Completo"
                         materialDesign:HintAssist.Foreground="Black"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
@@ -48,15 +54,30 @@
                         Margin="0,0,0,5"
                         VerticalAlignment="Top"
                         FontFamily="Roboto"/>
-                    
-                    <TextBox
+
+                    <!--<TextBox 
                         Margin="0,0,0,5"
                         x:Name="txtNumeroIdentidad"
+                        MaxLength="15"
                         materialDesign:HintAssist.Hint="Número de Identidad"
                         materialDesign:HintAssist.Foreground="Black"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                         materialDesign:TextFieldAssist.UnderlineBrush="#FF7AC6"
                         FontSize="15"
+                       
+                        CaretIndex="0"  
+                        VerticalAlignment="Top"
+                        FontFamily="Roboto" />-->
+                    <xctk:MaskedTextBox
+                        x:Name="txtNumeroIdentidad"
+                        Margin="0,0,0,5"
+                        
+                        materialDesign:HintAssist.Hint="Número de Identidad"
+                        materialDesign:HintAssist.Foreground="Black"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                        materialDesign:TextFieldAssist.UnderlineBrush="#FF7AC6"
+                        FontSize="15"
+                        Mask="0000-0000-00000"
                         CaretIndex="0"  
                         VerticalAlignment="Top"
                         FontFamily="Roboto"/>
@@ -66,6 +87,7 @@
                         <DatePicker
                             FontSize="15"
                             Width="177"
+                            x:Name="dpFechaNaciemiento"
                             FontFamily="Roboto"
                             materialDesign:HintAssist.Foreground="Black"
                             materialDesign:TextFieldAssist.HasClearButton="True"
@@ -141,8 +163,10 @@
                             VerticalAlignment="Top"
                             FontFamily="Roboto"/>
 
-                        <TextBox  
+                        <!--<TextBox  
                             x:Name="txtNumero"
+                            MaxLength="9"
+                            Text="{Binding NumeroTelefono, StringFormat=0:0000-0000}"
                             materialDesign:HintAssist.Hint="Número de teléfono"
                             materialDesign:HintAssist.Foreground="Black"
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
@@ -151,7 +175,22 @@
                             CaretIndex="0"  
                             Margin="20,0,0,0"
                             VerticalAlignment="Top"
-                            FontFamily="Roboto"/>
+                            FontFamily="Roboto"/>-->
+
+                        <xctk:MaskedTextBox
+                            x:Name="txtNumero"
+                            Mask="0000-0000"
+                            Text="{Binding NumeroTelefono, StringFormat=0:0000-0000}"
+                            materialDesign:HintAssist.Hint="Número de teléfono"
+                            materialDesign:HintAssist.Foreground="Black"
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                            materialDesign:TextFieldAssist.UnderlineBrush="#FF7AC6"
+                            FontSize="15"
+                            CaretIndex="0"  
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Top"
+                            FontFamily="Roboto"
+                            />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal"
@@ -241,6 +280,7 @@
                             Orientation="Vertical">
                     <GroupBox Style="{x:Null}" 
                               Header="Listado de Pacientes" 
+
                               BorderBrush="#FF7AC6"
                               FontWeight="SemiBold"
                               BorderThickness="2"
@@ -248,8 +288,11 @@
                         <StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBox 
+                                    x:Name="txtBuscarPaciente"
+                                    TextChanged="txtBuscarPaciente_TextChanged"
                                     materialDesign:HintAssist.Hint="Nombre Completo"
                                     materialDesign:HintAssist.Foreground="Black"
+                                    Text="{Binding ElementName=lbListaPacientes, Path=SelectedItem}"
                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                                     materialDesign:TextFieldAssist.UnderlineBrush="#FF7AC6"
                                     FontSize="12"
@@ -277,11 +320,16 @@
                                             Width="20" Height="20"/>
                                 </Button>-->
                             </StackPanel>
-                            
 
-                            
-                            <ListBox Width="auto" Height="410"
-                                 FontFamily="Roboto"/>
+
+
+                            <ListBox 
+                                Width="auto" Height="410"
+                                x:Name="lbListaPacientes"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                FontFamily="Roboto"/>
                         </StackPanel>
                         
                     </GroupBox>
@@ -297,6 +345,8 @@
                         Margin="0,30,0,0"
                         Background="#FF7AC6"
                         Width="130"
+                        x:Name="btn_Add_Paciente"
+                        Click="btn_Add_Paciente_Click"
                         FontFamily="Roboto"
                         BorderBrush="#FF7AC6"
                         ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" 
@@ -310,6 +360,8 @@
                     <Button
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         FontSize="15"
+                        x:Name="btn_Update_Paciente"
+                        Click="btn_Update_Paciente_Click"
                         Margin="10,30,0,0"
                         Background="#FF7AC6"
                         Width="145"
@@ -323,9 +375,10 @@
                             <TextBlock Text="ACTUALIZAR" Margin="5,0,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button
+                    <!--<Button
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         FontSize="15"
+                        
                         Margin="10,30,0,0"
                         Background="#FF7AC6"
                         Width="115"
@@ -338,8 +391,15 @@
                                                      Width="20" Height="19"/>
                             <TextBlock Text="BORRAR" Margin="5,0,0,0"/>
                         </StackPanel>
-                    </Button>
+                    </Button>-->
                 </StackPanel>
+
+
+                
+
+
+
+
             </Grid>
         </materialDesign:Card>
     </Grid>
